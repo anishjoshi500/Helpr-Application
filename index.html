@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body style="overflow:hidden">
+
+<div data-role="page" id="pageone">
+  <div data-role="header" style="height:44px">
+    <h1>HelpR</h1>
+  </div>
+
+<!-- Welcome Screen -->
+  <div data-role="main" class="ui-content">
+    <p align="center">Welcome!</p><br>
+    <a href="#pagetwo" data-transition="flip" class="ui-btn">Log In</a>
+    <a href="#pagefour" data-transition="flip" class="ui-btn">Sign Up</a>
+    <br>
+    <a href="#pagefive" data-transition="slide" class="ui-btn">About HelpR</a>
+  </div>
+</div>
+
+<!-- Login Screen -->
+  <div data-role="page" id="pagetwo">
+  <div data-role="header" style="height:44px">
+    <h1 align="top">Log In</h1>
+     <a href="#pageone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  <br>
+  <form name="myForm">
+  <input type="text" placeholder="Username" name="username" value="Group4"><br>
+  <input type="password" placeholder="Password" name="password" value="Group4">
+  <a href="#pagethree" type="submit" value="submit" class="ui-btn" data-transition="flip">Log In</a>
+  <a href="#pageeleven" align="center" data-transition="flip" style="color:#00bfff">Forgot Your Password</a>
+</form>
+  </div>
+</div>
+
+<!-- Home Screen -->
+  <div data-role="page" id="pagethree">
+  <div data-role="header" style="height:44px">
+    <h1>Home</h1>
+    <a href="#pageone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+    <a href="#overlayPanel" align="right" class="ui-btn ui-corner-all ui-icon-user ui-btn-icon-notext" style="height:35px; width:35px">User Icon</a><br>
+    <div data-role="panel" id="overlayPanel" data-display="overlay" data-position="right" style="width:120px" data-dismissible="true"> 
+    <a href="#pagesix" style="height:20px;width:65px" data-transition="flip" class="ui-btn">Profile</a><br>
+    <a href="#pageseven" style="height:20px;width:65px" data-transition="flip" class="ui-btn">Settings</a><br>
+    <a href="#pageone" style="height:20px;width:65px" data-transition="flip" style="color:red" class="ui-btn">Sign Out</a>
+    <a href="#pagethree" style="height:20px;width:45px" data-rel="close" class="ui-btn ui-btn-inline ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-right">Close
+    </a>
+  </div> 
+  </div>
+    <div data-role="main" class="ui-content">
+    	<p align="center"><b> Today's Problems</b><br>
+						<br>
+						<b> 10/05/2015 06:55PM </b><br>
+						<b> Confirmed By: </b>Paul <br>
+						<b> Title:</b> Jump start a car<br>
+						<b> Urgency Level:</b> Low<br>
+						<b> Skills and Tools required:</b> Batteries, connecting cables<br>
+						<b> Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+						<b> Generous Points:</b> 50<br>
+						<b> Nearest Location: </b>Hendrix Student Center <br>
+						
+						<a href="#pagethirty" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Contact Help Seeker</a>
+						<a href="#pagetwentyfive" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Confirm Help</a></p>
+    <div data-role="navbar" align="bottom">
+    <ul>
+      <li><a href="#pageeight" class="ui-btn ui-corner-all ui-icon-plus ui-btn-icon-top" data-transition="flip" style="height:20px; width:195px">Post Problem</a>
+      <li><a href="#pagenine" class="ui-btn ui-corner-all ui-icon-comment ui-btn-icon-top" data-transition="flip" style="height:20px; width:195px">Chat</a>
+	</ul>
+	<ul>
+      <li><a href="#pageten" class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-top" data-transition="flip" style="height:20px; width:195px">Help Problem</a>
+	  <li><a href="#pageoneoneone" class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-top" data-transition="flip" style="height:20px; width:195px">My posted Problem</a>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+
+<!--My Posted Problem-->
+<div data-role="page" id="pageoneoneone">
+  <div data-role="header" style="height:44px">
+    <h1>My Posted Problem</h1>
+     <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+<div data-role="main" class="ui-content">
+		<table align="center">
+				  <tr>
+					  <th data-priority="1"><a href="#pagetwotwotwo" class="ui-btn ui-icon-clock ui-btn-icon-top" data-transition="flip" style="height:35px; width:200px">My Processing Problems</a></th>
+				  </tr>
+				  <tr>
+					  <th data-priority="2"><a href="#pagethreethreethree" class="ui-btn ui-icon-eye ui-btn-icon-top" data-transition="flip" style="height:35px; width:200px">My Unsolved Problems</a></th>
+				  </tr>
+		</table>
+ </div>
+</div>
+
+<!--My Processing Problems-->
+ <div data-role="page" id="pagetwotwotwo">
+	<div data-role="header" style="height:44px">
+		<h1> My Processing Problems</h1>
+		<a href="#pageoneoneone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div data-role="main" class="ui-content">
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+						  <div data-role="header" data-theme="b">
+						  </div>
+						  <b> 10/05/2015 06:55PM </b><br>
+						  <b>Confirmed By: </b>Brian <br>
+						  <b>Title:</b> Jump start a car<br>
+						  <b>Urgency Level:</b> Low<br>
+						  <b>Skills and Tools required:</b> Batteries, connecting cables<br>
+						  <b>Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+						  <b>Generous Points:</b> 50<br>
+						  <b>Nearest Location: </b>Hendrix Student Center <br>
+						  <img align="center" src="../location1.JPG"><br>
+						  <a href="#pagefivefivefive" align="left" class="ui-btn" style="height:20px; width:200px">Solved by Helper</a><br>
+						  <div data-role="footer" data-theme="b">
+						  </div>
+					  </th>
+				 </tr>
+		 </table>
+	</div>
+ </div>
+
+
+<!--My Processing Problems -->
+ <div data-role="page" id="pagefivefivefive">
+	<div data-role="header" style="height:44px">
+		<h1> My Processing Problems</h1>
+		<a href="#pageoneoneone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div data-role="main" class="ui-content">
+	<b>Brain received 50 generous points from you.</b><br>
+	<b>Would you like to add bonus points for this help?</b> <input type="text" value="100"><br>
+	<a href="#pagethree" align="center" class="ui-btn">Submit</a>
+	</div>
+ </div>	
+
+<!--My Unsolved Problems -->
+ <div data-role="page" id="pagethreethreethree">
+	<div data-role="header" style="height:44px">
+		<h1> My Unsolved Problems</h1>
+		<a href="#pageoneoneone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div data-role="main" class="ui-content">
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+						  <div data-role="header" data-theme="b">
+						  </div>
+						  <b> 10/05/2015 06:55PM </b><br>
+						  <b>Title:</b> Jump start a car<br>
+						  <b>Urgency Level:</b> Low<br>
+						  <b>Skills and Tools required:</b> Batteries, connecting cables<br>
+						  <b>Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+						  <b>Generous Points:</b> 50<br>
+						  <b>Nearest Location: </b>Hendrix Student Center <br>
+						  <img align="center" src="../location1.JPG"><br>
+						  <div data-role="footer" data-theme="b">
+						  </div>
+					  </th>
+				 </tr>
+		 </table>
+	</div>
+ </div>	
+
+ <!--Sign Up-->
+<div data-role="page" id="pagefour">
+  <div data-role="header" style="height:44px">
+    <h1>Sign Up</h1>
+     <a href="#pageone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <form>
+	  Name <input type="text" placeholder="Enter Name" name="entername" value="Group4name">
+	  Username <input type="text" placeholder="Create Username" name="createusername" value="Group4">
+	  Password <input type="password" placeholder="Create Password" name="createpassword" value="Group4">
+	  Re-Enter Password  <input type="password" placeholder="Re-enter Password" name="reenterpassword" value="Group4">
+	  Email <input type="email" placeholder="Enter Email-Id" name="email" value="Group4@hcc.com">
+	  Age <input type="text" placeholder="Enter Age" name="Age" value="21">
+	  Skills <input type="text" placeholder="Enter Skills" name="Skills" value="Coding, Painting">
+	  Gender <br>
+	  Male<br>
+		<input type="radio" name="sex" value="male"><br>
+	  Female<br>
+		<input type="radio" name="sex" value="female"><br>
+  <a href="#pagethree" class="ui-btn" data-transition="flip">Sign Up</a>
+</form>
+</div>
+</div>
+
+ <!--About HelpR-->
+<div data-role="page" id="pagefive">
+  <div data-role="header" style="height:44px">
+    <h1>About HelpR</h1>
+    <a href="#pageone" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <br>
+  <p>There are many situations we face outdoor where we need help from our surroundings like to get a jump start your car,push a wheelchair, lift, shelter, first aid, changing tire, removing snow or a tree that has fallen on the pathway you are driving; but we either do not know who is around us or needs us. So, our team from their personal experience and after intervening and surveying a lot of people decided to resolve this issue by our HELPING application for mobile
+devices.</p><br>
+<p>
+This application is designed to ask for help and help others via notification within a given radius.</p>
+</div>
+</div>
+
+
+ <!--Profile-->
+<div data-role="page" id="pagesix">
+  <div data-role="header" style="height:44px">
+    <h1>Profile</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <form>
+  Name: <input type="text" value="Group4"><br>
+  Skills: <input type="text" value="Painting,Coding"><br>
+  Age:  <input type="text" value="21"><br>
+  Email Id: <input type="email" value="Group4@hcc.com"><br>
+  Total Generous Points: 
+  50<br><br>
+  <a href="#pagethree" class="ui-btn" data-transition="flip">Update Profile</a>
+</form>
+</div>
+</div>
+
+ <!-- Settings-->
+<div data-role="page" id="pageseven">
+  <div data-role="header" style="height:44px">
+    <h1>Settings</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+Notifications:<br>
+On<br>
+<input type="radio" name="not"><br>
+Off<br>
+<input type="radio" name="not"><br>
+Set the range within which you want to receive notification:<br>
+1 Mile<br>
+<input type="radio" name="range"><br>
+5 Mile<br>
+<input type="radio" name="range"><br>
+10 Mile<br>
+<input type="radio" name="range"><br>
+</div>
+</div>
+
+<!--Post a Problem-->
+  <div data-role="page" id="pageeight">
+  <div data-role="header" style="height:44px">
+    <h1>Post a Problem</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  <form>
+  Title: <input type="text" value="Jump start a car">
+  Urgency Level:<br>
+  High<br>
+	<input type="radio" name="ugl" ><br>
+ Medium<br>
+	<input type="radio"  name="ugl"><br>
+  Low<br>
+	<input type="radio"  name="ugl"><br>
+  Skills and Tools required: <input type="text" value="Car,Cables and a Battery"><br>
+  Generous Points Offered: <input type="text" value="50"><br>
+  Details: <textarea name="comment" id="comment">My car is low on battery and so I need somebody to help me jump start my car as soon as possible.</textarea><br>
+  <a href="#pageonetwo" class="ui-btn ui-icon-location ui-btn-icon-left">Choose Nearest Location</a>
+  <a href="#pageonethree" class="ui-btn" data-transition="flip">Post Help</a>
+</form>
+</div>
+</div>
+
+<!--Chat-->  
+  <div data-role="page" id="pagenine">
+  <div data-role="header" style="height:44px">
+    <h1>Chat</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+    <ul data-role="listview">
+      <li><a href="#pagexxx1"><h2 style="color:#00bfff">Bob</h2>Hey this is Bob</a></li>
+      <li><a href="#pagexxx2"><h2 style="color:#00bfff">Mike</h2>Hey this is Mike</a></li>
+      <li><a href="#pagexxx3"><h2 style="color:#00bfff">Ryan</h2>Hey this is Ryan</a></li>
+    </ul>
+  </div>
+</div>
+
+  <div data-role="page" id="pagexxx1">
+  <div data-role="header" style="height:44px">
+    <h1>Chat</h1>
+    <a href="#pagenine" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+    Bob's Chat
+  </div>
+</div>
+<div data-role="page" id="pagexxx2">
+  <div data-role="header" style="height:44px">
+    <h1>Chat</h1>
+    <a href="#pagenine" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+  	Mike's Chat
+  </div>
+</div>
+<div data-role="page" id="pagexxx3">
+  <div data-role="header" style="height:44px">
+    <h1>Chat</h1>
+    <a href="#pagenine" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+  	Ryan's Chat
+  </div>
+</div>
+
+<!--Help Problem--> 
+  <div data-role="page" id="pageten">
+  <div data-role="header" style="height:44px">
+    <h1>Help Problem</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+		<table align="center">
+				  <tr>
+					  <th data-priority="3"><a href="#pagetwentytwo" class="ui-btn ui-icon-search ui-btn-icon-top" data-transition="flip" style:"height:35px; width:35px">Search Specific Problem</a></th>
+				  </tr>
+				  <tr>
+					  <th data-priority="4"><a href="#pagetwentythree" class="ui-btn ui-icon-location ui-btn-icon-top" data-transition="flip" style:"height:35px; width:35px">Location Specific Problems</a></th>
+				  </tr>
+		</table>
+	</div>
+</div>
+
+
+<!--My Processing Problems -->
+ <div data-role="page" id="pagetwenty">
+	<div data-role="header" style="height:44px">
+		<h1>My Processing Problems</h1>
+		<a href="#pageten" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div> 
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  </div>
+					  <p>
+					  <b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Norman<br>
+					  <b>Title:</b> Jump start a car<br>
+					  <b>Urgency Level:</b> Low<br>
+					  <b>Skills and Tools required:</b> Batteries, connecting cables<br>
+					  <b>Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Hendrix Student Center <br>
+					  <img align="center" src="../location1.JPG"><br>	
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+				   <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  </div>
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Jenny<br>
+					  <b>Title:</b> Help with clearing snow on Elm Street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck with the snow in the middle of the road, need to get by to pick my son fast.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>  
+		</table>	
+	</div>
+</div>
+
+
+<!--My Unsolved Problems -->
+ <div data-role="page" id="pagetwentyone">
+	<div data-role="header" style="height:44px">
+		<h1> My Unsolved Problems</h1>
+		<a href="#pageten" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  </div>
+					  <p><b> 10/05/2015 06:55PM </b><br>
+						<b> Confirmed By: </b>Brian <br>
+						<b> Title:</b> Jump start a car<br>
+						<b> Urgency Level:</b> Low<br>
+						<b> Skills and Tools required:</b> Batteries, connecting cables<br>
+						<b> Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+						<b> Generous Points:</b> 50<br>
+						<b> Nearest Location: </b>Hendrix Student Center <br>
+						
+						<a href="#pagethirty" align="center" class="ui-btn" "data-transition="flip" style="height:20px; width:200px">Contact Help Seeker</a><br>
+						<a href="#pagetwentyfive" align="center" class="ui-btn" "data-transition="flip" style="height:20px; width:200px">Confirm Help</a><br>
+						<div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <div data-role="header" data-theme="b">
+					  </div>
+					  <th data-priority="1">
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Montgonmery<br>
+					  <b>Title:</b> Help with clearing snow on Elm Street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck with the snow in the middle of the road, need to get by to pick my daughter fast.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street<br>
+					  <img align="center" src="../location1.JPG">
+					  
+					  <a href="#pagethirtyone" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Contact Help Seeker</a>
+					  <a href="#pagetwentysix" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Confirm Help</a><br><br></p>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+		</table>	
+	</div>
+ </div>
+
+ 
+<!--Search by Location--> 
+ <div data-role="page" id="pageonetwentyeight">
+  <div data-role="header" style="height:44px">
+    <h1>Search by Location</h1>
+    <a href="#pagetwentythree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <h2>Elm Street</h2>
+	  <ul data-role="listview">
+		<li><a href="#pagetwentyseven"><img src="../location1.JPG"></a></li>
+	  </ul>
+  </div>
+</div>
+<div data-role="page" id="pageonetwentyeight1">
+  <div data-role="header" style="height:44px">
+    <h1>Search by Location</h1>
+    <a href="#pagetwentythree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <h2>Elm Street</h2>
+	  <ul data-role="listview">
+		<li><a href="#pagetwentyseven"><img src="../location1.JPG"></a></li>
+	  </ul>
+  </div>
+</div>
+
+
+
+<!--Search Specific Problem -->
+ <div data-role="page" id="pagetwentytwo">
+	<div data-role="header" style="height:44px">
+		<h1>Search Specific Problem</h1>
+		<a href="#pageten" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+	Enter Keywords: <input type="text" value="Help with clearing snow">
+	<a href="#pagetwentyseven1" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Search</a><br></p>
+	</div>
+ </div>
+
+
+<!--Location Specific Problems -->
+ <div data-role="page" id="pagetwentythree">
+	<div data-role="header" style="height:44px">
+		<h1>Location Specific Problems</h1>
+		<a href="#pageten" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+		<a href="#" class="ui-btn ui-icon-location ui-btn-icon-left">Choose Location</a>
+		<ul data-role="listview">
+			<li><a href="#pageonetwentyeight1">Elm Street</a></li>
+	    </ul>
+	</div>
+ </div>
+
+
+<!--Confirm Help-->
+ <div data-role="page" id="pagetwentyfive">
+	<div data-role="header" style="height:44px">
+		<h1>Confirm Help</h1>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  <h1>You have confirmed the following help</h1>
+					  </div>
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Paul<br>
+					  <b>Title:</b> Jump start a car<br>
+					  <b>Urgency Level:</b> Low<br>
+					  <b>Skills and Tools required:</b> Batteries, connecting cables<br>
+					  <b>Details:</b> Got stuck and need it urgently coz running late for a meeting.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Hendrix Student Center <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <b>Helper: </b>You<br>
+					  <div>
+						<a href="#pagethree" class="ui-btn" data-transition="flip">Go to Home</a>
+					  </div>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+			</table>	  
+	</div>
+	
+ </div>
+
+ <div data-role="page" id="pagetwentyfive1">
+	<div data-role="header" style="height:44px">
+		<h1>Confirm Help</h1>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  <h1>You have confirmed the following help</h1>
+					  </div>
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Montgonmery<br>
+					  <b>Title:</b> Help clearing snow on Elm street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck and need to clear snow urgently<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <b>Helper: </b>You<br>
+					  <div>
+						<a href="#pagethree" class="ui-btn" data-transition="flip">Go to Home</a>
+					  </div>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+			</table>	  
+	</div>
+	
+ </div>
+
+
+<!--Confirm Help-->
+ <div data-role="page" id="pagetwentysix">
+	<div data-role="header" style="height:44px">
+		<h1>Confirm Help</h1>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <div data-role="header" data-theme="b">
+					  <h1>You have confirmed the following help</h1>
+					  </div>
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Montgonmery<br>
+					  <b>Title:</b> Help with clearing snow on Elm Street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck with the snow in the middle of the road, need to get by to pick my daughter fast.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <b>Helper: </b>You<br>
+					  <div>
+						<a href="#pagethree" class="ui-btn" data-transition="flip">Go to Home</a>
+					  </div>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+			</table>	  
+	</div>
+ </div>
+
+
+
+<!--Search Results -->
+ <div data-role="page" id="pagetwentyseven">
+	<div data-role="header" style="height:44px">
+		<h1>Search Results</h1>
+		<a href="#pageonetwentyeight1" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Montgonmery<br>
+					  <b>Title:</b> Help with clearing snow on Elm Street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck with the snow in the middle of the road, need to get by to pick my daughter fast.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <b>Helper: </b>Not assigned yet. Do you want to help?<br>
+					  
+					  <a href="#pagethirtyone" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Contact Help Seeker</a>
+					  <a href="#pagetwentyfive" align="left" class="ui-btn" data-transition="slide" style="height:20px; width:200px">Confirm Help</a><br><br></p>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+			</table>	  
+	</div>
+	
+ </div>
+
+ <div data-role="page" id="pagetwentyseven1">
+	<div data-role="header" style="height:44px">
+		<h1>Results</h1>
+		<a href="#pagetwentytwo" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+		  <table align="left">
+				  <tr style="border-bottom: 1px solid lightgray;">
+					  <th data-priority="1">
+					  <p><b> 10/05/2015 06:55PM </b><br>
+					  <b>Help Seeker:</b> Montgonmery<br>
+					  <b>Title:</b> Help with clearing snow on Elm Street<br>
+					  <b>Urgency Level:</b> High<br>
+					  <b>Skills and Tools required:</b> Spade <br>
+					  <b>Details:</b> Got stuck with the snow in the middle of the road, need to get by to pick my daughter fast.<br>
+					  <b>Generous Points:</b> 50<br>
+					  <b>Nearest Location: </b>Elm Street <br>
+					  <img align="center" src="../location1.JPG"><br>
+					  <b>Helper: </b>Not assigned yet. Do you want to help?<br>
+					  
+					  <a href="#pagethirtyone1" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Contact Help Seeker</a>
+					  <a href="#pagetwentyfive1" align="center" class="ui-btn" data-transition="flip" style="height:20px; width:200px">Confirm Help</a><br><br></p>
+					  <div data-role="footer" data-theme="b">
+					  </div>
+					  </th>
+				  </tr>
+			</table>	  
+	</div>
+	
+ </div>
+
+
+<!--Forgot Your Password -->
+   <div data-role="page" id="pageeleven">
+  <div data-role="header" style="height:44px">
+    <h1>Forgot Your Password</h1>
+    <a href="#pagetwo" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  <p> Please Enter Your Email-Id and we will send you an Email with a link to reset your password</p>
+  <br>
+  <input type="email" placeholder="Enter Email-Id" name="email1" value="Group4@hcc.com"><br>
+  <a href="#" class="ui-btn" onclick="alert('Email Sent!')">Send Email</a>
+  </div>
+</div>
+
+<!--Post a Problem Choose Location -->
+<div data-role="page" id="pageonetwo">
+  <div data-role="header" style="height:44px">
+    <h1>Choose Location</h1>
+    <a href="#pagethree" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <h2>Nearby Landmarks:</h2>
+    <ul data-role="listview">
+      <li><a href="#pageeight">Hendrix Student Center</a></li>
+      <li><a href="#pageeight">Sikes Hall</a></li>
+      <li><a href="#pageeight">Mcadams Hall</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Contact Help Seeker -->
+<div data-role="page" id="pagethirtyone">
+	<div data-role="header" style="height:44px">
+		<h1>Contact Help Seeker</h1>
+		<a href="#pageten" align="center" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+	<b>Help Seeker:</b> Paul<br>
+	<b>Title:</b> Jump start a car<br>
+	Mobile:
+	<a href="#pagethirty" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Call</a><br>
+	Chat: 
+	<a href="#pagetwentyfive" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Begin Chat</a><br>
+	</div>
+ </div>
+
+ <div data-role="page" id="pagethirtyone1">
+	<div data-role="header" style="height:44px">
+		<h1>Contact Help Seeker</h1>
+		<a href="#pageten" align="center" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+	<b>Help Seeker:</b> Montgonmery<br>
+	<b>Title:</b>  Help clearing snow<br>
+	Mobile:
+	<a href="#pagethirtytwo" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Call</a><br>
+	Chat: 
+	<a href="#pagex" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Begin Chat</a><br>
+	</div>
+ </div>
+<!-- Problem is Posted -->
+<div data-role="page" id="pageonethree">
+  <div data-role="header" style="height:44px">
+    <h1>Problem Posted</h1>
+    <a href="#pageeight" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+
+<div data-role="main" class="ui-content">
+  <p><b>Your Help has been Posted</b></p>
+  <br>
+  <a href="#pagethree" class="ui-btn" data-transition="flip">Go to Home</a>
+
+  </div>
+  </div>
+ <!-- Contact Help Seeker -->
+ <div data-role="page" id="pagethirty">
+	<div data-role="header" style="height:44px">
+		<h1>Contact Help Seeker</h1>
+		<a href="#pageten" align="center" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+	</div>
+	<div>
+	<b>Help Seeker:</b> Paul<br>
+	<b>Title:</b> Jump start a car<br>
+	Mobile:
+	<a href="#pagethirtytwo" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Call</a><br>
+	Chat: 
+	<a href="#pagex" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Begin Chat</a><br>
+	</div>
+ </div>
+
+
+
+
+<div data-role="page" id="pagex">
+  <div data-role="header" style="height:44px">
+    <h1>Contact Help Seeker</h1>
+    <a href="#pagethirty" align="center" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+   <img src="../c1.png" align="center"/><br>
+   <a href="#pagethirty" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Cancel</a>
+  </div>
+</div>
+<div data-role="page" id="pagethirtytwo">
+  <div data-role="header" style="height:44px">
+    <h1>Contact Help Seeker</h1>
+    <a href="#pagethirty" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+    <b>Calling Paul...<br>
+	<img src="../call1.png" width="450" height="450" align="center"/><br>
+	<a href="#pagethirty" align="center" class="ui-btn ui-icon-search" data-transition="slide" style="height:20px; width:200px">Cancel</a>
+  </div>
+</div>
+
+
+<div data-role="page" id="pagex1">
+  <div data-role="header" style="height:44px">
+    <h1>Contact Help Seeker</h1>
+    <a href="#pageten" align="center" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+   <img src="../c1.png" align="center"/><br>
+   <a href="#pagethirty" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Cancel</a>
+  </div>
+</div>
+ <div data-role="page" id="pagey1">
+  <div data-role="header" style="height:44px">
+    <h1>Contact Help Seeker</h1>
+    <a href="#pageten" align="left" class="ui-btn ui-icon-arrow-l ui-btn-icon-left" style="height:20px; width:40px">Back</a><br>
+  </div>
+  <div data-role="main" class="ui-content">
+    <b>Calling Montgonmery...<br>
+	<img src="../call1.png" align="center"/><br>
+	<a href="#pagethirty" align="center" class="ui-btn ui-icon-search " data-transition="slide" style="height:20px; width:200px">Cancel</a>
+  </div>
+</div>
+
+</body>
+</html>
